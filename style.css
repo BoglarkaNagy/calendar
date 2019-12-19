@@ -1,15 +1,51 @@
 body, html, div, main, header {
     margin: 0;
     padding: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: large;
+    color: white;
+    
+
 }
 
 .calendar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    /* grid-template-columns: repeat(7, 1fr);*/
+    grid-template-rows: 1fr;
     grid-auto-rows: 14vw;
+    height: 100vh;
 }
 
 .day {
-    background-color: palegoldenrod;
+    background-color:#8ed3f4;
     margin: 5px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.calendar-header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-image: url(duotone.png);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    margin: 5px;
+}
+
+.space {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.calendar-title {
+    font-size: 78px;
+    padding-left: 10px;
+    text-shadow: #454545;
+}
+
+.day:nth-child(7n),
+.day:nth-child(7n-1){
+    background-color: #454545;
 }
